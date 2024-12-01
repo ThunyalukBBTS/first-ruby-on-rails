@@ -1,18 +1,9 @@
 <% unless comment.archived? %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
-
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-
-  <p>
-    <%= link_to "Delete Comment", [comment.article, comment], data: {
+<div class="flex">
+    <b class="font-semibold text-gray-700"><%= comment.commenter %></b><div class="text-gray-700"> : <%= comment.body %></div>
+  <%= link_to "delete", [comment.article, comment], class:"underline text-red-500 ms-auto", data: {
                   turbo_method: :delete,
                   turbo_confirm: "Are you sure?"
                 } %>
-  </p>
+</div>
 <% end %>
