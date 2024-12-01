@@ -18,5 +18,8 @@ Rails.application.routes.draw do
   
   
   # use this instead.
-  resources :articles
+  # resources :articles
+  resources :articles do
+    resources :comments
+  end
 end
