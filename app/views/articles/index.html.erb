@@ -1,7 +1,5 @@
 <h1 class="article-header">Articles</h1>
 
-<a href="/articles/new">New an Article</a>
-
 <ul>
   <% @articles.each do |article| %>
     <li>
@@ -11,3 +9,6 @@
     </li>
   <% end %>
 </ul>
+
+<%= link_to "New Article", new_article_path %>
+
